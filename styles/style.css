@@ -1,0 +1,34 @@
+/* <!-- blue in logo: #00A69C
+grey:  #58596B
+Text: #00655F --> */
+
+body{
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+
+.container-fluid, .footer {
+    background-color: #e7fefe;
+}
+* {
+    color: #463a36;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.border {
+    background-color: #d9f3d7;
+}
+
+.accordion-header {
+    background-color: #d4f5ef;
+}
+
+.h1 {
+    font-weight: 500!important;
+}
+
+.card-body, .accordion-body {
+    background-color: #d7f3ee94;
+}

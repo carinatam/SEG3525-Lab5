@@ -9,7 +9,7 @@ body{
 
 }
 
-.container-fluid, .footer {
+.footer {
     background-color: #e7fefe;
 }
 * {
@@ -31,4 +31,16 @@ body{
 
 .card-body, .accordion-body {
     background-color: #d7f3ee94;
+}
+
+.btn-close {
+    float: right;
+}
+
+.g-2 {
+    margin-bottom: 10px;
+}
+
+.navbar {
+    background-color: #9fd7ff7c;
 }

@@ -20,6 +20,19 @@
       crossorigin="anonymous"
     ></script>
 
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script type="text/javascript" src="https://jonthornton.github.io/jquery-timepicker/jquery.timepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://jonthornton.github.io/jquery-timepicker/jquery.timepicker.css">
+    
+
+
+    <!-- JS -->
+    <script src="scripts/script.js"></script>
+
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -28,17 +41,60 @@
     />
   </head>
   <body>
-    <div class="container-fluid px-3 py-5">
+    <div class="container-fluid px-0 pb-5">
       <!-- header -->
-      <div class="text-center header">
+      <!-- <div class="text-center header">
         <img class="img-fluid" width="350px" src="./photos/logo.png" />
         <p class="h5"><em>Since 1977</em></p>
         <p class="h5">40 Bay Street, Toronto, ON M5J 2X2</p>
-      </div>
+      </div> -->
+      <nav class="navbar navbar-expand-md sticky-top navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img
+              class="d-inline-block align-top"
+              height="70"
+              src="./photos/logo.png"
+            />
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            dtaa-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+            aria-controls="navbarContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="#"
+                  >Offered Services</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#experts">Experts on Site</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#appointmentSection">Book an Appointment</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
       <!-- offered services -->
-      <div class="border rounded border-success p-5 m-5">
-        <p class="h1 pb-3">Offered Services</p>
+      <div class="border rounded border-success p-5 m-5" id="offered-services">
+        <p class="h1 pb-3">
+          <img
+            src="https://img.icons8.com/officel/55/000000/physical-therapy.png"
+          />
+          Offered Services
+        </p>
         <div class="accordion" id="accordionPanelsStayOpenExample">
           <div class="accordion-item">
             <h2 class="accordion-header" id="panelsStayOpen-headingOne">
@@ -72,7 +128,10 @@
                 internal component to the exam which is done via a digital
                 (finger) vaginal and/or rectal exam.
                 <br />
-                <a class="btn btn-primary mt-3" href="#form" role="button"
+                <a
+                  class="btn btn-primary mt-3"
+                  href="#appointmentSection"
+                  role="button"
                   >Book this service</a
                 >
               </div>
@@ -112,7 +171,10 @@
                 traditions derived from Eastern cultures, such as Shiatsu and
                 Tuina.
                 <br />
-                <a class="btn btn-primary mt-3" href="#form" role="button"
+                <a
+                  class="btn btn-primary mt-3"
+                  href="#appointmentSection"
+                  role="button"
                   >Book this service</a
                 >
               </div>
@@ -151,7 +213,10 @@
                 acupuncture to certain points, it is thought to improve the flow
                 of Qi, thereby improving health.
                 <br />
-                <a class="btn btn-primary mt-3" href="#form" role="button"
+                <a
+                  class="btn btn-primary mt-3"
+                  href="#appointmentSection"
+                  role="button"
                   >Book this service</a
                 >
               </div>
@@ -190,7 +255,10 @@
                 naturopathic manipulation and traditional Chinese
                 medicine/acupuncture, may also be used during treatments.
                 <br />
-                <a class="btn btn-primary mt-3" href="#form" role="button"
+                <a
+                  class="btn btn-primary mt-3"
+                  href="#appointmentSection"
+                  role="button"
                   >Book this service</a
                 >
               </div>
@@ -230,7 +298,10 @@
                 tissue injury caused by a traumatic event, such as falling, or
                 repetitive stress, such as sitting without proper back support.
                 <br />
-                <a class="btn btn-primary mt-3" href="#form" role="button"
+                <a
+                  class="btn btn-primary mt-3"
+                  href="#appointmentSection"
+                  role="button"
                   >Book this service</a
                 >
               </div>
@@ -240,8 +311,13 @@
       </div>
 
       <!-- experts on site -->
-      <div class="border rounded border-success p-5 m-5">
-        <p class="h1 pb-3">Experts on Site</p>
+      <div class="border rounded border-success p-5 m-5" id="experts">
+        <p class="h1 pb-3">
+          <img
+            src="https://img.icons8.com/ultraviolet/55/4a90e2/doctor-female.png"
+          />
+          Experts on Site
+        </p>
         <div class="row">
           <div class="col-sm-4">
             <div class="card mb-3">
@@ -251,21 +327,37 @@
                 <p class="text-muted">
                   Registered Physiotherapist <br />MSc.PT
                 </p>
-                <p class="card-text">
-                  Lynnette Blanchard is a Registered Physiotherapist with a
-                  special interest in Pelvic Floor Physiotherapy. She received
-                  her Bachelor of Science from McMaster University in 2011 and
-                  Master of Science in Physical Therapy from the University of
-                  Toronto in 2013. Lynnette is a strong believer in continuing
-                  education and is certified in Acupuncture and Dry Needling.
-                  She has received advanced training in Pelvic Floor
-                  Physiotherapy allowing her to treat pregnancy related pain,
-                  bowel or bladder incontinence, urgency, constipation, pain
-                  during or after intercourse, post pregnancy recovery, prolapse
-                  and chronic back/pelvic pain. She is excited to be part of
-                  Focus Physiotherapy and is looking forward to assist you on
-                  your road to recovery!
-                </p>
+                <a id="lynetteButton" class="btn btn-primary"
+                  >More info</a
+                >&nbsp;&nbsp;&nbsp;&nbsp;
+                <a id="lynetteShowAvail" class="btn btn-primary">Lynette's Availability</a>
+                <div id="lynetteInfo" style="display: none">
+                  <p class="card-text">
+                    <br />Lynnette Blanchard is a Registered Physiotherapist
+                    with a special interest in Pelvic Floor Physiotherapy. She
+                    received her Bachelor of Science from McMaster University in
+                    2011 and Master of Science in Physical Therapy from the
+                    University of Toronto in 2013. Lynnette is a strong believer
+                    in continuing education and is certified in Acupuncture and
+                    Dry Needling. She has received advanced training in Pelvic
+                    Floor Physiotherapy allowing her to treat pregnancy related
+                    pain, bowel or bladder incontinence, urgency, constipation,
+                    pain during or after intercourse, post pregnancy recovery,
+                    prolapse and chronic back/pelvic pain. She is excited to be
+                    part of Focus Physiotherapy and is looking forward to assist
+                    you on your road to recovery!
+                  </p>
+                </div>
+                <div id="lynetteAvail" style="display: none">
+                  <p class="card-text">
+                    <ul>
+                      <li>Monday</li>
+                      <li>Tuesday</li>
+                      <li>Wednesday</li>
+                      <li>Friday</li>
+                    </ul>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -278,20 +370,36 @@
                   Doctor of Naturopathic Medicine/Naturopathic Doctor<br />B.Sc.(Hon.),
                   N.D
                 </p>
-                <p class="card-text">
-                  Dr. Kent Jarvis is a naturopathic doctor with a clinical niche
-                  in endocrine and metabolic conditions. He is a regulated
-                  member of the College of Naturopaths of Ontario. He is also a
-                  professional member of the Canadian Association of
-                  Naturopathic Doctors, the Ontario Association of Naturopathic
-                  Doctors, the Endocrine Society, and a supporter of the Thyroid
-                  Foundation of Canada. He acknowledges the perceived gaps and
-                  limitations in the conventional patient care setting, and
-                  strives to address them by working in a collaborative manner.
-                  He has prescribing rights, is certified in intravenous
-                  nutrient therapy, and provides contemporary acupuncture; thus,
-                  patients can explore a variety of treatment options.
-                </p>
+                <a id="kentButton" class="btn btn-primary"
+                  >More info</a
+                >&nbsp;&nbsp;&nbsp;&nbsp;
+                <a id="kentShowAvail" class="btn btn-primary">Kent's Availability</a>
+                <div id="kentInfo" style="display: none">
+                  <p class="card-text">
+                    <br />Dr. Kent Jarvis is a naturopathic doctor with a
+                    clinical niche in endocrine and metabolic conditions. He is
+                    a regulated member of the College of Naturopaths of Ontario.
+                    He is also a professional member of the Canadian Association
+                    of Naturopathic Doctors, the Ontario Association of
+                    Naturopathic Doctors, the Endocrine Society, and a supporter
+                    of the Thyroid Foundation of Canada. He acknowledges the
+                    perceived gaps and limitations in the conventional patient
+                    care setting, and strives to address them by working in a
+                    collaborative manner. He has prescribing rights, is
+                    certified in intravenous nutrient therapy, and provides
+                    contemporary acupuncture; thus, patients can explore a
+                    variety of treatment options.
+                  </p>
+                </div>
+                <div id="kentAvail" style="display: none">
+                  <p class="card-text">
+                    <ul>
+                      <li>Monday</li>
+                      <li>Thursday</li>
+                      <li>Friday</li>
+                    </ul>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -301,19 +409,35 @@
               <div class="card-body">
                 <h5 class="card-title">Taddeo Grant</h5>
                 <p class="text-muted">Chiropractor<br />HBSc, DC</p>
-                <p class="card-text">
-                  Dr. Taddeo Grant has 16 years of experience and has helped
-                  over 10,000 people to date with their neck, shoulder, back and
-                  headache pains. His approach involves working with a team of
-                  therapists, (physio, massage and chiro) to minimize the out of
-                  pocket expense and maximize the results from treatment. In
-                  addition to the physical injuries, Dr. Taddeo uses a great
-                  deal of online resources to help with various emotional issues
-                  that contribute to our physical pain. This may include using
-                  various home strategies such as guided meditations designed to
-                  ease the stress and chatter of the mind all too often causing
-                  physical pain manifested as blocked negative emotions.
-                </p>
+                <a id="taddeoButton" class="btn btn-primary"
+                  >More info</a
+                >&nbsp;&nbsp;&nbsp;&nbsp;
+                <a id="taddeoShowAvail" class="btn btn-primary">Taddeo's Availability</a>
+                <div id="taddeoInfo" style="display: none">
+                  <p class="card-text">
+                    <br />Dr. Taddeo Grant has 16 years of experience and has
+                    helped over 10,000 people to date with their neck, shoulder,
+                    back and headache pains. His approach involves working with
+                    a team of therapists, (physio, massage and chiro) to
+                    minimize the out of pocket expense and maximize the results
+                    from treatment. In addition to the physical injuries, Dr.
+                    Taddeo uses a great deal of online resources to help with
+                    various emotional issues that contribute to our physical
+                    pain. This may include using various home strategies such as
+                    guided meditations designed to ease the stress and chatter
+                    of the mind all too often causing physical pain manifested
+                    as blocked negative emotions.
+                  </p>
+                </div>
+                <div id="taddeoAvail" style="display: none">
+                  <p class="card-text">
+                    <ul>
+                      <li>Tuesday</li>
+                      <li>Wednesday</li>
+                      <li>Thursday</li>
+                    </ul>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -321,140 +445,301 @@
       </div>
 
       <!-- book an appointment -->
-      <div class="border rounded border-success p-5 m-5">
-        <p class="h1 pb-3">Book an Appointment</p>
+      <div class="border rounded border-success p-5 m-5" id="appointmentSection">
+        <p class="h1 pb-3">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="55"
+            height="55"
+            viewBox="0 0 50 50"
+            style="fill: #4a90e2"
+          >
+            <path
+              d="M 6 6 C 4.355469 6 3 7.355469 3 9 L 3 15.8125 C 2.992188 15.875 2.992188 15.9375 3 16 L 3 43 C 3 43.550781 3.449219 44 4 44 L 30.84375 44 C 32.398438 47.519531 35.925781 50 40 50 C 45.5 50 50 45.5 50 40 C 50 37.21875 48.847656 34.691406 47 32.875 L 47 16 C 47.007813 15.9375 47.007813 15.875 47 15.8125 L 47 9 C 47 7.355469 45.644531 6 44 6 Z M 6 8 L 17 8 L 17 15 L 5 15 L 5 9 C 5 8.433594 5.433594 8 6 8 Z M 19 8 L 31 8 L 31 15 L 19 15 Z M 33 8 L 44 8 C 44.566406 8 45 8.433594 45 9 L 45 15 L 33 15 Z M 5 17 L 17 17 L 17 24 L 5 24 Z M 19 17 L 31 17 L 31 24 L 19 24 Z M 33 17 L 45 17 L 45 24 L 33 24 Z M 5 26 L 17 26 L 17 33 L 5 33 Z M 19 26 L 31 26 L 31 33 L 19 33 Z M 33 26 L 45 26 L 45 31.375 C 43.523438 30.515625 41.820313 30 40 30 C 37.28125 30 34.808594 31.097656 33 32.875 Z M 40 32 C 44.398438 32 48 35.601563 48 40 C 48 44.398438 44.398438 48 40 48 C 35.601563 48 32 44.398438 32 40 C 32 35.601563 35.601563 32 40 32 Z M 39 34 L 39 39.5 L 35.40625 42.1875 L 36.59375 43.8125 L 41 40.5 L 41 34 Z M 5 35 L 17 35 L 17 42 L 5 42 Z M 19 35 L 31.375 35 C 30.515625 36.476563 30 38.179688 30 40 C 30 40.6875 30.085938 41.351563 30.21875 42 L 19 42 Z"
+            ></path>
+          </svg>
+          Book an Appointment
+        </p>
         <p>
           Please book an appointment using the form below. A confirmation email
           will be sent to your email. If there are any questions, please email
           us and we will reach out within 48 hours.
         </p>
         <div class="formDiv" id="form">
-          <form>
-            <div class="input-group mb-3">
-              <input
-                type="text"
-                class="form-control"
-                id="firstName"
-                placeholder="First name"
-              />
-              <input
-                type="text"
-                class="form-control"
-                id="lastName"
-                placeholder="Last name"
-              />
+          <form id="bookingForm">
+            <p class="h2">Choose your service:</p>
+            <div class="invalid-feedback" id="invalidService">
+              Please select a service.<br><br>
             </div>
-            <div class="input-group mb-3">
-              <input
-                type="email"
-                class="form-control"
-                id="email"
-                placeholder="Email address: example@domain.com"
-              />
-              <input
-                type="number"
-                class="form-control"
-                id="phoneNumber"
-                placeholder="Phone number: 123-456-7890"
-              />
+            <div class="valid-feedback" id="validService">
+              Looks good!<br><br>
             </div>
-            <div class="input-group mb-3">
-              <span class="input-group-text" id="appointmentLabel"
-                >Appointment Date & Time</span
-              >
-              <input
-                type="datetime-local"
-                class="form-control"
-                id="appointmentDateTime"
-                aria-describedby="appointmentLabel"
-              />
-            </div>
-            <p class="h2">Choose your service(s):</p>
-            <p>
-              If multiple services are required, we will be in contact to setup
-              an extended appointment.
-            </p>
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value=""
-                id="pelvicFloorPhysiotherapy"
-              />
-              <label class="form-check-label" for="pelvicFloorPhysiotherapy"
-                >Pelvic Floor Physiotherapy</label
-              >
-            </div>
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value=""
-                id="massageTherapy"
-              />
-              <label class="form-check-label" for="massageTherapy"
-                >Massage Therapy</label
-              >
-            </div>
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value=""
-                id="acupuncture"
-              />
-              <label class="form-check-label" for="acupuncture"
-                >Acupuncture</label
-              >
-            </div>
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value=""
-                id="naturopathicMedicine"
-              />
-              <label class="form-check-label" for="naturopathicMedicine"
-                >Naturopathic Medicine</label
-              >
-            </div>
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value=""
-                id="chiropractic"
-              />
-              <label class="form-check-label" for="chiropractic"
-                >Chiropractic</label
-              >
+            <div id="services">
+              <div class="form-check">
+                <input
+                  class="form-check-input pelvicCheckbox"
+                  type="radio"
+                  name="selectedService"
+                  value="pelvic floor physiotherapy"
+                  id="pelvicFloorPhysiotherapy"
+                />
+                <label class="form-check-label" for="pelvicFloorPhysiotherapy"
+                  >Pelvic Floor Physiotherapy</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input massageCheckbox"
+                  type="radio"
+                  name="selectedService"
+                  value="massage therapy"
+                  id="massageTherapy"
+                />
+                <label class="form-check-label" for="massageTherapy"
+                  >Massage Therapy</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input acupunctureCheckbox"
+                  type="radio"
+                  name="selectedService"
+                  value="acupuncture"
+                  id="acupuncture"
+                />
+                <label class="form-check-label" for="acupuncture"
+                  >Acupuncture</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input naturopathicCheckbox"
+                  type="radio"
+                  name="selectedService"
+                  value="naturopathic medicine"
+                  id="naturopathicMedicine"
+                />
+                <label class="form-check-label" for="naturopathicMedicine"
+                  >Naturopathic Medicine</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input chiropracticCheckbox"
+                  type="radio"
+                  name="selectedService"
+                  value="chiropractic"
+                  id="chiropractic"
+                />
+                <label class="form-check-label" for="chiropractic"
+                  >Chiropractic</label
+                >
+              </div>
             </div>
             <br />
             <p class="h2">Choose your desired physician:</p>
-            <input class="form-check-input" type="radio" value="" id="LynetteBlanchard"/>
-            <label class="form-check-label" for="LynetteBlanchard">Lynette Blanchard</label><br>
-            <input class="form-check-input" type="radio" value="" id="KentJarvis"/>
-            <label class="form-check-label" for="KentJarvis">Kent Jarvis</label><br>
-            <input class="form-check-input" type="radio" value="" id="TaddeoGrant"/>
-            <label class="form-check-label" for="TaddeoGrant">Taddeo Grant</label><br><br>
+            <div class="invalid-feedback" id="invalidPhysician">
+              Please select a physician.<br><br>
+            </div>
+            <div class="valid-feedback" id="validPhysician">
+              Looks good!<br><br>
+            </div>
+            <div class="expertSelect">
+              <div class="form-check">
+                <input
+                  class="form-check-input lynetteCheckbox"
+                  type="radio"
+                  value="Lynette Blanchard"
+                  name="desiredPhysician"
+                  id="LynetteBlanchard"
+                />
+                <label class="form-check-label" for="LynetteBlanchard"
+                  >Lynette Blanchard</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input kentCheckbox"
+                  type="radio"
+                  value="Kent Jarvis"
+                  name="desiredPhysician"
+                  id="KentJarvis"
+                />
+                <label class="form-check-label" for="KentJarvis"
+                  >Kent Jarvis</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input taddeoCheckbox"
+                  type="radio"
+                  value="Taddeo Grant"
+                  name="desiredPhysician"
+                  id="TaddeoGrant"
+                />
+                <label class="form-check-label" for="TaddeoGrant"
+                  >Taddeo Grant</label
+                >
+              </div>
+            </div>
+            
+            <br>
+            <p class="h2">Personal information</p>
+            <div class="row g-2">
+              <div class="col-md form-floating">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  placeholder="First name"
+                  title="Please enter your first name."
+                />
+                <label for="firstName">First Name</label>
+                <div class="valid-feedback" id="validFirstName">Looks good!</div>
+                <div class="invalid-feedback" id="invalidFirstName">First name must be greater than 1 letter.</div>
+              </div>
+              <div class="col-md form-floating">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  placeholder="Last name"
+                  title="Please enter your last name."
+                />
+                <label for="lastName">Last Name</label>
+                <div class="valid-feedback" id="validLastName">Looks good!</div>
+                <div class="invalid-feedback" id="invalidLastName">Last name must be greater than 1 letter.</div>
+              </div>
+            </div>
 
+            <div class="row g-2">
+              <div class="col-md form-floating">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Email address: example@domain.com"
+                  title="Please enter your email address."
+                />
+                <label for="email">Email Address: example@domain.com</label>
+                <div class="valid-feedback" id="validEmail">Looks good!</div>
+                <div class="invalid-feedback" id="invalidEmail">Invalid email format.</div>
+              </div>
+              <div class="col-md form-floating">
+                <input
+                  type="text"
+                  class="form-control required"
+                  id="phoneNumber"
+                  placeholder="Phone number"
+                  title="Please enter your home/mobile number (no need to input area code)."
+                />
+                <label for="phoneNumber">Phone number</label>
+                <div class="valid-feedback" id="validPhone">Looks good!</div>
+                <div class="invalid-feedback" id="invalidPhone">Invalid phone number.</div>
+              </div>
+            </div>
+
+            <div class="row g-2">
+              <div class="form-floating col-md">
+                <input type="text" class="form-control" id="dateInput">
+                <label for="dateInput">Appointment Date</label>
+                <div class="valid-feedback" id="validDate">Looks good!</div>
+                <div class="invalid-feedback" id="invalidDate">Please select a date.</div>
+              </div>
+              <div class="form-floating col-md">
+                <input type="text" class="form-control" id="timeInput">
+                <label for="timeInput">Appointment Time</label>
+                <div class="valid-feedback" id="validTime">Looks good!</div>
+                <div class="invalid-feedback" id="invalidTime">Please select a time.</div>
+              </div>
+            </div>
+
+            <br />
             <p class="h2">Payment information</p>
-            <p>To guarantee a reservation, please enter your credit card information:</p>
-            <div class="input-group mb-3">
-              <span class="input-group-text" id="cardNumberLabel">Card number</span>
-              <input type="number" class="form-control" id="cardNumber" placeholder="1234-1234-1234-1234" aria-describedby="cardNumberLabel">
-            </div>
-            <div class="input-group mb-3">
-              <span class="input-group-text" id="expirationDate">Expiry date</span>
-              <input type="number" class="form-control" id="expiryMonth" placeholder="MM" aria-describedby="expirationDate">
-              <input type="number" class="form-control" id="expiryYear" placeholder="YY" aria-describedby="expirationDate">
-            </div>
-            <div class="input-group mb-3">
-              <span class="input-group-text" id="cvvLabel">CVV</span>
-              <input type="number" class="form-control" id="cvv" placeholder="123" aria-describedby="cvvLabel">
+            <p>
+              To guarantee a reservation, please enter your credit card
+              information:
+            </p>
+            <div class="col-sm-6 form-floating">
+              <input
+                type="text"
+                class="form-control"
+                id="cardNumber"
+                placeholder="1234-1234-1234-1234"
+                aria-describedby="cardNumberLabel"
+                title="Please enter your credit card number."
+              />
+              <label for="cardNumber">Card number</label>
+              <div class="valid-feedback" id="validCard">Looks good!</div>
+              <div class="invalid-feedback" id="invalidCard">Please enter a valid credit card number.</div>
             </div>
 
-
+            <div class="row g-2 pt-2">
+              <div class="col-sm-2 form-floating">
+                <select class="form-select" id="expirationMonth">
+                  <option selected></option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                  <option>9</option>
+                  <option>10</option>
+                  <option>11</option>
+                  <option>12</option>
+                </select>
+                <label for="expirationMonth">Expiration month: </label>
+                <div class="valid-feedback" id="validExpMonth">Looks good!</div>
+                <div class="invalid-feedback" id="invalidExpMonth">Please select a month.</div>
+              </div>
+              <div class="col-sm-2 form-floating">
+                <select class="form-select" id="expirationYear">
+                  <option selected></option>
+                  <option>2021</option>
+                  <option>2022</option>
+                  <option>2023</option>
+                  <option>2024</option>
+                  <option>2025</option>
+                  <option>2026</option>
+                  <option>2027</option>
+                  <option>2028</option>
+                  <option>2029</option>
+                  <option>2030</option>
+                  <option>2031</option>
+                  <option>2032</option>
+                  <option>2033</option>
+                  <option>2034</option>
+                  <option>2035</option>
+                  <option>2036</option>
+                  <option>2037</option>
+                  <option>2038</option>
+                  <option>2039</option>
+                  <option>2040</option>
+                  <option>2041</option>
+                </select>
+                <label for="expirationYear">Expiration year: </label>
+                <div class="valid-feedback" id="validExpYear">Looks good!</div>
+                <div class="invalid-feedback" id="invalidExpYear">Please select a year.</div>
+              </div>
+              <div class="col-sm-2 form-floating">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cvv"
+                  placeholder="123"
+                  aria-describedby="cvvLabel"
+                  title="CVV is the last three digits on the back of your credit card."
+                />
+                <label for="cvv">CVV/CVC</label>
+                <div class="valid-feedback" id="validCvv">Looks good!</div>
+                <div class="invalid-feedback" id="invalidCvv">Please enter a valid CVV/CVC.</div>
+              </div>
+            </div>
 
             <label for="additionalInfo"
               >Please let us know if there is anything we should be aware
@@ -465,7 +750,7 @@
               id="additionalInfo"
               rows="3"
             ></textarea>
-            <br>
+            <br />
 
             <div class="alert alert-warning" role="alert">
               Due to COVID-19 restrictions, all entering patients must be
@@ -484,12 +769,23 @@
               src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=40%20Bay%20Street%20Toronto+(Tam%20Physiotherapy%20Clinic)&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
             ></iframe>
             <div class="text-center mt-3">
-              <button type="submit" class="btn btn-primary btn-lg">
+              <button
+                type="submit"
+                class="btn btn-primary btn-lg"
+                id="submitAppointment"
+              >
                 Book appointment
               </button>
             </div>
           </form>
         </div>
+        <br />
+        <div
+          class="alert alert-success"
+          role="alert"
+          id="submitButton"
+          style="display: none"
+        ></div>
       </div>
     </div>
     <footer class="footer mt-auto py-3 text-center">

@@ -213,6 +213,7 @@ $(document).ready(function() {
     })
 
     $("#submitAppointment").click(function(e){
+        $("#submitButton").empty().hide();
         e.preventDefault();
         if(!hasErrors()){
             $("#submitButton").show();
